@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">usoDeListas</string>
+    <string name="titulo_principal">Productos</string>
+    <string name="ir_registro">Registrar producto</string>
+    <string name="ir_lista">Ver lista de productos</string>
+    <string name="registro_productos">Registro de productos</string>
+    <string name="lista_productos">Lista de productos</string>
+    <string name="nombre_producto">Nombre del producto</string>
+    <string name="precio">Precio</string>
+    <string name="tipo_producto">Tipo de producto</string>
+    <string name="registrar">Registrar</string>
+    <string name="error_precio">Introduce un precio válido (número ≥ 0).</string>
+    <string name="error_nombre">El nombre no puede estar vacío.</string>
+    <string name="lista_vacia">No hay productos registrados. Usa «Registrar producto» para añadir alguno.</string>
+</resources>
