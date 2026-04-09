@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import com.example.usodelistas.data.RepositorioProductos
 import com.example.usodelistas.model.Producto
 import com.example.usodelistas.model.TipoProducto
+import com.example.usodelistas.ui.ImagenDesdeInternet
 import com.example.usodelistas.ui.theme.UsoDeListasTheme
 
 // Formulario: escribe en variables de estado (remember); al registrar, se guarda en RepositorioProductos.
@@ -122,6 +123,21 @@ private fun FormularioRegistro(modifier: Modifier = Modifier) {
                 Text(tipo.etiqueta, modifier = Modifier.padding(start = 8.dp))
             }
         }
+
+        // Vista previa: la URL depende del tipo (se descarga de internet).
+        Spacer(Modifier.height(16.dp))
+        Text(
+            stringResource(R.string.imagen_del_tipo),
+            style = MaterialTheme.typography.labelLarge
+        )
+        Spacer(Modifier.height(8.dp))
+        ImagenDesdeInternet(
+            url = tipoElegido.urlImagen,
+            contentDescription = tipoElegido.etiqueta,
+            modifier = Modifier
+                .height(160.dp)
+                .fillMaxWidth()
+        )
 
         Spacer(Modifier.height(24.dp))
         Button(

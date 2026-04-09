@@ -8,6 +8,7 @@
     <string name="nombre_producto">Nombre del producto</string>
     <string name="precio">Precio</string>
     <string name="tipo_producto">Tipo de producto</string>
+    <string name="imagen_del_tipo">Imagen del tipo elegido</string>
     <string name="registrar">Registrar</string>
     <string name="error_precio">Introduce un precio válido (número ≥ 0).</string>
     <string name="error_nombre">El nombre no puede estar vacío.</string>

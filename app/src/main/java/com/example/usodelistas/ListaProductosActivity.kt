@@ -19,7 +19,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -40,6 +39,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import com.example.usodelistas.data.RepositorioProductos
 import com.example.usodelistas.model.Producto
+import com.example.usodelistas.ui.ImagenDesdeInternet
 import com.example.usodelistas.ui.theme.UsoDeListasTheme
 import java.util.Locale
 
@@ -121,11 +121,10 @@ private fun TarjetaProducto(producto: Producto) {
                 .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(
-                imageVector = producto.tipo.icono,
+            ImagenDesdeInternet(
+                url = producto.tipo.urlImagen,
                 contentDescription = producto.tipo.etiqueta,
-                modifier = Modifier.size(56.dp),
-                tint = MaterialTheme.colorScheme.primary
+                modifier = Modifier.size(72.dp)
             )
             Spacer(Modifier.width(16.dp))
             Column(Modifier.weight(1f)) {

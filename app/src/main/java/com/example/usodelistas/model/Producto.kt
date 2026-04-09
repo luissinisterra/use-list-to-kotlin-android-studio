@@ -1,21 +1,25 @@
 package com.example.usodelistas.model
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Checkroom
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.PhoneAndroid
-import androidx.compose.material.icons.filled.Restaurant
-import androidx.compose.ui.graphics.vector.ImageVector
-
-// Cada tipo tiene un nombre para mostrar y un icono (la "imagen" del producto en la lista).
-enum class TipoProducto(val etiqueta: String, val icono: ImageVector) {
-    TECNOLOGIA("Tecnología", Icons.Filled.PhoneAndroid),
-    ROPA("Ropa", Icons.Filled.Checkroom),
-    ALIMENTOS("Alimentos", Icons.Filled.Restaurant),
-    HOGAR("Hogar", Icons.Filled.Home)
+// Imágenes por categoría (URLs HTTPS). Coil las descarga y las muestra en pantalla.
+enum class TipoProducto(val etiqueta: String, val urlImagen: String) {
+    TECNOLOGIA(
+        "Tecnología",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&auto=format&fit=crop&q=80"
+    ),
+    ROPA(
+        "Ropa",
+        "https://images.unsplash.com/photo-1523381210438-271e8be1f52b?w=400&auto=format&fit=crop&q=80"
+    ),
+    ALIMENTOS(
+        "Alimentos",
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&auto=format&fit=crop&q=80"
+    ),
+    HOGAR(
+        "Hogar",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&auto=format&fit=crop&q=80"
+    )
 }
 
-// Lo que guardamos por cada producto registrado.
 data class Producto(
     val nombre: String,
     val precio: Double,
